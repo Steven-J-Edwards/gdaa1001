@@ -1,0 +1,31 @@
+column_name,statcan_characteristic,characteristic_id,units,notes
+dauid,DAUID (DA boundary layer),NA,code,Dissemination area code: province (2) + census division (2) + DA (4)
+dguid,DGUID (DA boundary layer),NA,code,"Dissemination geography unique ID, used to match the Census Profile"
+cduid,CDUID,NA,code,First 4 characters of dauid
+cd_name,CDNAME (CD boundary layer),NA,text,"Census division (county) name, joined by cduid"
+csduid,CSDUID (CSD boundary layer),NA,code,"Census subdivision, from a spatial join of each DA's point on surface"
+csd_name,CSDNAME (CSD boundary layer),NA,text,Census subdivision name
+csd_type,CSDTYPE (CSD boundary layer),NA,code,"StatCan CSD type abbreviation: T = town, MD = municipal district, RGM = regional municipality, RM: Rural municipality (StatCan's code for West Hants, whose legal name is West Hants Regional Municipality), SC = subdivision of county municipality, IRI = Indian reserve"
+cmauid,CMAUID (CMA boundary layer),NA,code,NA if the DA is outside every CMA/CA (spatial join of each DA's point on surface)
+cma_name,CMANAME (CMA boundary layer),NA,text,CMA or CA name; NA if outside every CMA/CA
+cma_type,CMATYPE (CMA boundary layer),NA,code,"B = CMA, D = tracted CA, K = non-tracted CA"
+cma_class,Derived from CMATYPE,NA,text,"Halifax CMA, Other CA, or Outside CMA/CA"
+pop_2021,"Population, 2021",1,persons,100% data
+land_area_km2,Land area in square kilometres,7,km²,"From the Census Profile, not the boundary layer"
+pop_density,Population density per square kilometre,6,persons per km²,100% data
+median_age,Median age of the population,40,years,100% data
+pct_age_0_14,0 to 14 years,35,%,"Published percentage, under 'Total - Distribution (%) of the population by broad age groups - 100% data'"
+pct_age_65_plus,65 years and over,37,%,"Published percentage, under 'Total - Distribution (%) of the population by broad age groups - 100% data'"
+avg_household_size,Average household size,56,persons,100% data
+median_household_income,Median total income of household in 2020 ($),229,$ (2020),"Income in 2020, under 'Total - Income statistics for private households - 100% data'"
+lim_at_pct,"Prevalence of low income based on the Low-income measure, after tax (LIM-AT) (%)",331,%,"Low-income measure, after tax"
+participation_rate,Participation rate,2228,%,"25% sample data, population aged 15 and over in private households"
+unemployment_rate,Unemployment rate,2230,%,"25% sample data, population aged 15 and over in private households"
+pct_bachelor_plus_25_64,Bachelor’s degree or higher,2024,%,"Percentage of 'Total - Highest certificate, diploma or degree for the population aged 25 to 64 years in private households - 25% sample data'"
+pct_owner,Owner,1401,%,Percentage of 'Total - Private households by tenure - 25% sample data'
+pct_built_pre_1961,1960 or before,1427,%,"'1960 or before', as a percentage of 'Total - Occupied private dwellings by period of construction - 25% sample data'"
+pct_commute_car,"Car, truck or van",2604,%,"Driver and passenger combined, as a percentage of the employed labour force aged 15+ with a usual place of work or no fixed workplace address (25% sample data)"
+pct_french_mother_tongue,French,383,%,"Single responses only (French alone), as a percentage of 'Total - Mother tongue for the total population excluding institutional residents - 100% data'"
+pct_movers_5yr,Movers,1971,%,"Lived at a different address 5 years earlier, as a percentage of 'Total - Mobility status 5 years ago - 25% sample data' (population aged 5 and over in private households)"
+median_age_na_reason,FLAG (Census Profile),NA,text,"Why median_age is NA, from StatCan's flag code (NA where a value is present). Every missing value is flagged as suppressed, including DAs with no residents"
+median_household_income_na_reason,FLAG (Census Profile),NA,text,"Why median_household_income is NA, from StatCan's flag code (NA where a value is present)"
